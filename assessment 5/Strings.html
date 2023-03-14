@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>Strings</title>
+    </head>
+    <body>
+        <h1><u>3)Strings</u></h1></br>
+        <p><h1>i)Count Characters</h1></br>You are given a string S, and your task is to return an array B (having a size of 2), where B[0] contains the count of character A (uppercase) in string S and B[1] contains the count of character D (uppercase) in string S.</br><b>Note</b>: You have to complete countCharacters function. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and the only line of the input contains a string S.</p>
+        <p><h1>Output Format</h1></br>Return array B as output.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S.</br>S contains both lowercase and uppercase alphabets</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>AbaDd</br>Sample Output</br>11</p>
+        <p>CODE</p>
+        <p>const countCharacters = (S) =></br>{</br>let countA=0;
+        </br>let countD=0;</br>for(i=0;i<S.length;i++){</br>if(S.charAt(i)==='A'){</br>countA++;</br>}</br>else if(S.charAt(i)==='D'){</br>countD++;</br>}</br>}</br>let arr=[countA,countD];</br>return arr;</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>AbaDd</br>Output</br>11</p><hr>
+
+        <p><h1>ii)Count the Heads</h1></br>Tina is given a string  S which contains the first letter of all the student names in her class. She got a curiosity to check how many people have their names starting from the same alphabet. So given a string  S , she decided to write a code that finds out the count of characters that occur more than once in the string.</br><b>Note</b>: You have to complete <b>Count Head function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and the only line of the input contains a string S (with no space and contains only lowercase letters).</p>
+        <p><h1>Output Format</h1></br>Return updated String S as output, where the string contains the charcter followed by their occurrence(if greater than 1) in alphabetical order.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S.</br>S contains only lowercase alphabets.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>prepbytes</br>Sample Output</br>e2p2</p>
+        <p>CODE</p>
+        <p>var Count_Occ = (s) => {</br> let n=s.length;</br>let str=s.split("").sort().join("");</br>let ans="";</br>for(i=0;i<n;i++){</br>let count=0;</br>for(j=0;j<n;j++){</br>if(str[i]===str[j] && i>j){</br>break;</br>}</br>if(str[i]===str[j]){</br>count++;</br>}</br>}</br>if(count>1){</br>ans+=str[i]+count;</br>}</br>}</br>return ans;</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>prepbytes</br>Output</br>e2p2</p><hr>
+
+        <p><h1>iii)Count the Vowels</h1></br>You are given a string S containing both uppercase and lowercase letters. You need to find out the number of vowels in the given string.</br><b>Note</b>: You have to complete <b>Count_Vowel function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and only line of the input contains string S.</p>
+        <p><h1>Output Format</h1></br>Return the number of Vowels in the string S as output.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>Prepbytes</br>Sample Output</br>2</p>
+        <p>CODE</p>
+        <p>const Count_Vowels =(S)) => {</br>count=0;</br>for(i=0;i<S.length;i++){</br>if(S[i]==='a' || S[i]==='i' || S[i]==='e' || S[i]==='o' || S[i]==='u'){</br>count++;</br>}</br>}</br>return count;</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>Prepbytes</br>Output</br>2</p><hr>
+
+        <p><h1>iv)Concatenate the Strings</h1></br>You are given two strings S1 and S2 (containing both uppercase and lowercase letters), You need to retrun a string which is the concatenation of both the given strings.</br><b>Note</b>: You have to complete <b>Concatenate_Strings function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first line of the input contains the first string S1 and the second line of input contains the second string S2.</p>
+        <p><h1>Output Format</h1></br>Return the String S3 as output, which is the concatenation of given both strings.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S1|,|S2| ≤ 100, where |S| denotes the length of string S. </p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>Prep</br>bytes</br>Sample Output</br>Prepbytes</p>
+        <p>CODE</p>
+        <p>var Concatenate_Strings = (S1,S2) => {</br>let S3=[];</br>S3=S1.concat(S2);</br>return S3;</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>Prep</br>bytes</br>Output</br>Prepbytes</p><hr>
+
+        <p><h1>v)Find Length</h1></br>You are given a string S, and your task is to return the length of the string S.</br><b>Note</b>: You have to solve it without using length method. You have to complete <b>findLength function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and the only line of the input contains a string S.</p>
+        <p><h1>Output Format</h1></br>Return the length of the string S.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S.</br>S contains both lowercase and uppercase alphabets.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>CeDqe</br>Sample Output</br>5</p>
+        <p>CODE</p>
+        <p>const findLength = (S) => {</br>count=0;</br>for(i=0;i<S.length;i++){</br></S.length>count++;</br>}</br>return count;</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>CeDqe</br>Output</br>5</p><hr>
+
+        <p><h1>vi)Find the Winner</h1></br>You are given a string S consisting of two letters A and D,where each character represent the winner of N games played between Aditya and Danish, where letter A represents the win of Aditya and letter D represents the win of Danish.</br>You need to find out the that which player wins the maximum number of games or there is a draw between them.</br><b>Note</b>: You have to complete <b>Game_Winner function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and only line of the input contains string S. </p>
+        <p><h1>Output Format</h1></br>Return the name of the player who have won the maximum number of games, if both player won same number of games return Draw.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input 1</br>ADDAAADDDDD</br>Sample Output 1</br>Danish</br>Sample Input 2</br>ADDAAADD</br>Sample Output 2</br>Draw</p>
+        <p>CODE</p>
+        <p>var Game_Winner = (S) => {</br>countA=0;</br>countD=0;</br>for(i=0;i<S.length;i++){</br>if(S[i]==='A'){</br>countA++;</br>}</br>else if(S[i]==='D'){</br>countD++;</br>}</br>}</br>if(countA>countD){</br>return "Aditya";</br>}</br>else if(countD>countA){</br>return "Danish";</br>}</br>else if(countD===countA){</br>return "Draw";</br>}</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input 1</br>ADDAAADDDDD</br>Output 1</br>Danish</br>Input 2</br>ADDAAADD</br>Output 2</br>Draw</p><hr>
+
+        <p><h1>vii)Join Strings</h1></br>You are given two strings S and P, and your task is to concatenate them and return the concatenated string.</br><b>Note</b>: You have to complete <b>joinStrings function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and the only line of the input contains two space-separated strings S and P.</p>
+        <p><h1>Output Format</h1></br>Return the final concatenated string.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S|,|P| ≤ 100, where |S| and |P| denote the length of string S and P, respectively.</br>S and P contain both lowercase and uppercase alphabets.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>PrepBytes Technologies</br>Sample Output</br>PrepBytesTechnologies</p>
+        <p>CODE</p>
+        <p>const joinStrings = (S,P) => {</br>return S.concat(P);</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>PrepBytes Technologies</br>Output</br>PrepBytesTechnologies</p><hr>
+        
+        <p><h1>viii)Plaindrome Check</h1></br>You are given a string S, Your task is to check wether the given string is a Palindrome or not.</br>A Palindrome is a string, which turnout same when read in reverse direction.</br>Example: "naman" is a Palindrome.</br>String can contain both upppercase lowercase letters.</br><b>Note</b>: You have to complete <b>Plain_Check function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and the only line of the input contains a string S.</p>
+        <p><h1>Output Format</h1></br>Return "True" if the given string is Palindrome else return "False" (without " ") .</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S.</br>S contains both lowercase and uppercase alphabets.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input 1</br>Naman</br>Sample Output 1</br>FalseSample Input 2</br>naman</br>Sample Output 2</br>True</p>
+        <p>CODE</p>
+        <p>var Palin_Check = (str) => {</br>for(i=0;i<str.length;i++){</br>if(str[0]===str[8] && str[1]===str[7] && str[2]===str[6] && str[3]===str[5] && str[4]===str[4]){</br>return "True";</br>}</br>else{</br>return "False"</br>}</br>}</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input 1</br>Naman</br>Output 1</br>False</br> Input 2</br>naman</br>Output 2</br>True</p><hr>
+
+        <p><h1>ix)Reverse the String</h1></br>You are given a string S, Your task is to Reverse the string.</br>String can contain both upppercase lowercase letters.</br><b>Note</b>: You have to complete <b>Reverse_String function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and the only line of the input contains a string S.</p>
+        <p><h1>Output Format</h1></br>Return the reversed String.</p>
+        <p><h1>Constraints</h1></br>1
+            ≤ |S| ≤ 100, where |S| denotes the length of string S.</br>S contains both lowercase and uppercase alphabets.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>I am utkarsh raj</br>Sample Output</br>jar hsraktu ma I</p>
+        <p>CODE</p>
+        <p>var Reverse_String = (str) => {</br>let str2="";</br>for(i=str.length-1;i>=0;i--){</br>str2+=str.charAt(i);</br>}</br>return str2;};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>I am utkarsh raj</br>Output</br>jar hsraktu ma I</p><hr>
+        
+        <p><h1>x)Match the Strings</h1></br>You are given two strings S1 and S2, Your task is to print YES if both strings are same else print NO.</br><b>Note</b>: You have to complete <b>String_Match function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first line of the input contains a string S1.</br>The second line of the input contains a string S2.</p>
+        <p><h1>Output Format</h1></br>Return YES if S1 and S2 are same, else return NO.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S1|,|S2| ≤ 100, where |S| denotes the length of string S.</br>S1 and S2 contains both lowercase and uppercase alphabets.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>Prepbytes</br>Prepbytes</br>Sample Output</br>YES</p>
+        <p>CODE</p>
+        <p>var String_Match = (S1,S2) {</br>if(S1===S2){</br>return "YES";</br>} </br>else{</br>return "NO";</br>}</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>Prepbytes</br>Prepbytes</br>Output</br>YES</p><hr>
+
+        <p><h1>xi)String Replace</h1></br>You are given a string S, along with a pattern string and a text string.</br>You need to repalce the pattern string in S to the text string.</br><b>Note</b>: You have to complete <b>Replace function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and the only line of the input contains a string S.</p>
+        <p><h1>Output Format</h1></br>Return updated String S as output.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S.</br>S contains both lowercase and uppercase alphabets.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>Hi, I am You.</br>You</br>Prepbytes</br>Sample Output</br>Hi, I am Prepbytes.</p>
+        <p>CODE</p>
+        <p>var Replace = (S,pattern , text)</br>{</br>return S.replace(pattern,text);</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>Hi, I am You.</br>You</br>Prepbytes</br>Output</br>Hi, I am Prepbytes.</p><hr>
+
+        <p><h1>xi)Split the String</h1></br>You are given a string S, Your task is to split the string with respect to spaces.</br><b>Note</b>: You have to complete <b>Split_the_String function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and the only line of the input contains a string S.</p>
+        <p><h1>Output Format</h1></br>Return the array of splitted strings of S.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S.</br>S contains both lowercase and uppercase alphabets.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>I am utkarsh raj</br>Sample Output</br>I</br>am</br>utkarsh</br>raj</p>
+        <p>CODE</p>
+        <p>var Split_the_string = (S) =></br>{</br>return S.split(" ");</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br>I am utkarsh raj</br>Output</br>I</br>am</br>utkarsh</br>raj</p><hr>
+
+        <p><h1>xi)Count the Vowels and Consonants</h1></br>You are given a string S containing both uppercase and lowercase letters.</br>You need to find out the number of vowels and the number of consonants in the given string.</br><b>Note</b>: You have to complete <b>Count_Vowels function</b> and <b>Count_Consonants function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first and only line of the input contains string S. </p>
+        <p><h1>Output Format</h1></br>Return the number of Vowels and the number of Consonants in the string S in the functions.</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S| ≤ 100, where |S| denotes the length of string S. </p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input</br>Prepbytes</br>Sample Output</br>2</br>7</p>
+        <p>CODE</p>
+        <p>var Count_Vowels= (S) =></br>{</br>countv=0;</br>for(i=0;i<S.length;i++){</br>if(S[i]==='a' || S[i]==='e' || S[i]==='i' || S[i]==='o' || S[i]==='u'){</br>countv++;</br>}</br>}</br>return countv;</br>};</br>var Count_Consonants= (S) =></br>{</br>countc=0;</br>for(i=0;i<S.length;i++){</br>if(S[i]!=='a' && S[i]!=='e' && S[i]!=='i' && S[i]!=='o' && S[i]!=='u'){</br>countc++;</br>}</br>}</br>return countc;</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input</br></br>Prepbytes</br>Output</br>2</br>7</p><hr>
+
+
+
+
+
+        </body>
+
+
+
+
+    </html>
